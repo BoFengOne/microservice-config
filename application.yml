@@ -6,9 +6,9 @@
 spring:
   profiles: dev     #开发环境
     appliction:
-      name: springcloud-study-config-dev
+      name: springcloud-config-3344-dev
 ---
 spring:
   profiles: test    #测试环境
     appliction:
-      name: springcloud-study-config-test
+      name: springcloud-config-3344-test
