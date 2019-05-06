@@ -7,11 +7,7 @@ server:
 spring:
   profiles: dev #开发环境
   application:
-<<<<<<< HEAD
     name: springcloud-study-config-client-dev
-=======
-    name: springcloud-learn-config-client
->>>>>>> 11d73050aefad759e03d65c35a9ece15ce411d52
 
 eureka:
   client:
@@ -23,11 +19,7 @@ server:
 spring:
   profiles: test #开发环境
   application:
-<<<<<<< HEAD
     name: springcloud-study-config-client-test
-=======
-    name: springcloud-learn-config-client
->>>>>>> 11d73050aefad759e03d65c35a9ece15ce411d52
 
 eureka:
   client:
