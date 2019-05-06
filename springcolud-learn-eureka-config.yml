@@ -1,0 +1,40 @@
+﻿spring:
+  profiles:
+    active:
+      - dev
+---
+server:
+  port: 7001
+
+spring:
+  profiles: dev
+  application:
+    name: config-eureka-server-7001-dev
+
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    service-url:
+      defaulstZone: http://eureka7001.com:7001/eureka/
+    register-with-eureka: false   #当前的eureka-server自己不注册进服务列表
+    fetch-registry: false         #不通过Eureka获取注册信息
+---
+server:
+  port: 7001
+
+spring:
+  profiles: test
+  application:
+    name: config-eureka-server-7001-test
+
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    service-url:
+      defaulstZone: http://eureka7001.com:7001/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+
+
