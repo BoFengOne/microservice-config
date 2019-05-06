@@ -21,8 +21,8 @@ spring:
       max-total: 5
       max-wait-millis: 200
 mybatis:
-  config-location: classpath:/myBatisConfig/mapper/*Mapper.xml
-  mapper-locations: classpath:myBatisConfig/myBatisConfig.xml
+  config-location: classpath:myBatisConfig/myBatisConfig.xml
+  mapper-locations: classpath:/myBatisConfig/mapper/*Mapper.xml
 eureka:
   client:
     service-url:
@@ -49,8 +49,8 @@ spring:
       max-total: 5
       max-wait-millis: 200
 mybatis:
-  config-location: classpath:/myBatisConfig/mapper/*Mapper.xml
-  mapper-locations: classpath:myBatisConfig/myBatisConfig.xml
+  config-location: classpath:myBatisConfig/myBatisConfig.xml
+  mapper-locations: classpath:/myBatisConfig/mapper/*Mapper.xml
 eureka:
   client:
     service-url:
