@@ -7,7 +7,7 @@ server:
 spring:
   profiles: dev #开发环境
   application:
-    name: springcloud-study-config-client-dev
+    name: springcloud-study-config-client
 
 eureka:
   client:
@@ -19,7 +19,7 @@ server:
 spring:
   profiles: test #开发环境
   application:
-    name: springcloud-study-config-client-test
+    name: springcloud-study-config-client
 
 eureka:
   client:
