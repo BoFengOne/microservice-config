@@ -21,13 +21,40 @@ spring:
       max-total: 5
       max-wait-millis: 200
 mybatis:
-  config-location:
-  type-aliases-package:
-  mapper-locations:
+  config-location: classpath:/myBatisConfig/mapper/*Mapper.xml
+  mapper-locations: classpath:myBatisConfig/myBatisConfig.xml
 eureka:
   client:
     service-url:
       defaultZone:  http://eureka7001.com:7001/eureka
   instance:
     instance-id: dept-config-8201
+    prefer-ip-address: true
+---
+server:
+  port: 8202
+spring:
+  profiles: test
+  application:
+    name: config-provider-dept-8202
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/spring_cloud_01
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+mybatis:
+  config-location: classpath:/myBatisConfig/mapper/*Mapper.xml
+  mapper-locations: classpath:myBatisConfig/myBatisConfig.xml
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-config-8202
     prefer-ip-address: true
