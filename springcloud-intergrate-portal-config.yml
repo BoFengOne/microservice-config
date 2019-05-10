@@ -8,7 +8,7 @@ server:
 spring:
   profiles: dev
   application:
-    name: SPRING-CLOUD-PORTAL-7004
+    name: SPRING-CLOUD-PORTAL-7004-DEV
 # eureka配置
 eureka:
   client:
@@ -20,7 +20,7 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url:  http://192.168.199.14:7004/tx/tx/manager/
+    url:  http://192.168.199.14:8888/tx/manager/
 #网关配置
 # zuul:
 #   routes:
@@ -61,7 +61,7 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url:  http://192.168.199.14:7004/tx/tx/manager/
+    url:  http://192.168.199.14:8888/tx/manager/
 #网关配置
 # zuul:
 #   routes:
@@ -102,7 +102,7 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url:  http://192.168.199.14:7004/tx/tx/manager/
+    url:  http://192.168.199.14:8888/tx/manager/
 #网关配置
 # zuul:
 #   routes:
