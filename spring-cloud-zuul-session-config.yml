@@ -43,15 +43,15 @@ zuul:
   routes:
     inventory-service:                             #自定义名称（inventory-service）表示代理inventory微服务
       path: /inventory/**                          #/inventory/开头的路径转发至表示代理inventory微服务
-      serviceId: spring-cloud-inventory
+      serviceId: SPRING-CLOUD-INVENTORY-7002-DEV
       sensitiveHeaders: "*"                        #解决经过网关zuul转发请求后发生session失效
     order-service:
       path: /order/**
-      serviceId: spring-cloud-order
+      serviceId: SPRING-CLOUD-ORDER-7003-DEV
       sensitiveHeaders: "*"
     portal-service:
       path: /portal/**
-      serviceId: spring-cloud-portal
+      serviceId: SPRING-CLOUD-PORTAL-7004-DEV
       sensitiveHeaders: "*"
   ignored-services: "*"
   prefix: /test
