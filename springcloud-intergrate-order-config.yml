@@ -21,6 +21,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.199.14:7001/eureka/
+    registerWithEureka: true
+    fetch-registry: true
   instance:
     instance-id: spring-cloud-order       #服务实例名称修改
     prefer-ip-address: true               #访问路径显示Ip
@@ -51,6 +53,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.199.14:7001/eureka/
+    registerWithEureka: true
+    fetch-registry: true
   instance:
     instance-id: spring-cloud-order       #服务实例名称修改
     prefer-ip-address: true               #访问路径显示Ip
@@ -81,6 +85,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.199.14:7001/eureka/
+    registerWithEureka: true
+    fetch-registry: true
   instance:
     instance-id: spring-cloud-order       #服务实例名称修改
     prefer-ip-address: true               #访问路径显示Ip
