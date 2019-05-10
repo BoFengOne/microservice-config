@@ -6,8 +6,10 @@ server:
   port: 7003
 
 spring:
-  profiles: dev 
-#Spring boot 数据源配置
+  profiles: dev
+  application:
+    name: SPRING-CLOUD-ORDER-7003-DEV
+  #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_01
     username: root
@@ -28,14 +30,16 @@ mybatis:
 #Tx-Manager配置
 tm:
   manager:
-      url:  http://192.168.199.14:7004/tx/tx/manager/
+    url:  http://192.168.199.14:7004/tx/tx/manager/
 ---
 server:
   port: 7003
 
 spring:
-  profiles: test 
-#Spring boot 数据源配置
+  profiles: test
+  application:
+    name: SPRING-CLOUD-ORDER-7003-TEST
+  #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_01
     username: root
@@ -62,8 +66,10 @@ server:
   port: 7003
 
 spring:
-  profiles: deploy 
-#Spring boot 数据源配置
+  profiles: deploy
+  application:
+    name: SPRING-CLOUD-ORDER-7003-DEPLOY
+  #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_01
     username: root
@@ -84,4 +90,4 @@ mybatis:
 #Tx-Manager配置
 tm:
   manager:
-      url:  http://192.168.199.14:7004/tx/tx/manager/
+    url:  http://192.168.199.14:7004/tx/tx/manager/

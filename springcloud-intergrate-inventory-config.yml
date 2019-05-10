@@ -6,8 +6,10 @@ server:
   port: 7002
 
 spring:
-  profiles: dev 
-#Spring boot 数据源配置
+  profiles: dev
+  application:
+    name: SPRING-CLOUD-INVENTORY-7002-DEV
+  #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_02
     username: root
@@ -30,14 +32,16 @@ mybatis:
 #TxManager配置
 tm:
   manager:
-        url: http://192.168.199.14:7004/tx/tx/manager/
+    url: http://192.168.199.14:7004/tx/tx/manager/
 ---
 server:
   port: 7002
-  
+
 spring:
-  profiles: test 
-#Spring boot 数据源配置
+  profiles: test
+  application:
+    name: SPRING-CLOUD-INVENTORY-7002-TEST
+  #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_02
     username: root
@@ -60,14 +64,16 @@ mybatis:
 #TxManager配置
 tm:
   manager:
-        url: http://192.168.199.14:7004/tx/tx/manager/
+    url: http://192.168.199.14:7004/tx/tx/manager/
 ---
 server:
   port: 7002
-  
+
 spring:
-  profiles: deploy 
-#Spring boot 数据源配置
+  profiles: deploy
+  application:
+    name: SPRING-CLOUD-INVENTORY-7002-TEST
+  #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_02
     username: root
@@ -90,4 +96,4 @@ mybatis:
 #TxManager配置
 tm:
   manager:
-        url: http://192.168.199.14:7004/tx/tx/manager/
+    url: http://192.168.199.14:7004/tx/tx/manager/

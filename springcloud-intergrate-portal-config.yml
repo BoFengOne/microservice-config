@@ -6,7 +6,9 @@ server:
   port: 7004
 
 spring:
-  profiles: dev  
+  profiles: dev
+  application:
+    name: SPRING-CLOUD-PORTAL-7004
 # eureka配置
 eureka:
   client:
@@ -16,9 +18,9 @@ eureka:
     instance-id: spring-cloud-portal       #服务实例名称修改
     prefer-ip-address: true                #访问路径显示Ip
 # #TxManager配置
-# tm:
-#   manager:
-#     url:  http://192.168.199.14:7004/tx/tx/manager/
+tm:
+  manager:
+    url:  http://192.168.199.14:7004/tx/tx/manager/
 #网关配置
 zuul:
   routes:
@@ -45,7 +47,9 @@ server:
   port: 7004
 
 spring:
-  profiles: dev  
+  profiles: test
+  application:
+    name: SPRING-CLOUD-PORTAL-7004-TEST
 # eureka配置
 eureka:
   client:
@@ -55,9 +59,9 @@ eureka:
     instance-id: spring-cloud-portal       #服务实例名称修改
     prefer-ip-address: true                #访问路径显示Ip
 # #TxManager配置
-# tm:
-#   manager:
-#     url:  http://192.168.199.14:7004/tx/tx/manager/
+tm:
+  manager:
+    url:  http://192.168.199.14:7004/tx/tx/manager/
 #网关配置
 zuul:
   routes:
@@ -84,7 +88,9 @@ server:
   port: 7004
 
 spring:
-  profiles: dev  
+  profiles: deploy
+  application:
+    name: SPRING-CLOUD-PORTAL-7004-DEPLOY
 # eureka配置
 eureka:
   client:
@@ -94,9 +100,9 @@ eureka:
     instance-id: spring-cloud-portal       #服务实例名称修改
     prefer-ip-address: true                #访问路径显示Ip
 # #TxManager配置
-# tm:
-#   manager:
-#     url:  http://192.168.199.14:7004/tx/tx/manager/
+tm:
+  manager:
+    url:  http://192.168.199.14:7004/tx/tx/manager/
 #网关配置
 zuul:
   routes:
