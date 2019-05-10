@@ -28,9 +28,9 @@ eureka:
 mybatis:
   mapper-locations: classpath:/myBatisConfig/mappers/*.xml
 #TxManager配置
-# tm:
-#   manager:
-#         url: http://192.168.199.14:7004/tx/tx/manager/
+tm:
+  manager:
+        url: http://192.168.199.14:7004/tx/tx/manager/
 ---
 server:
   port: 7002
@@ -58,9 +58,9 @@ eureka:
 mybatis:
   mapper-locations: classpath:/myBatisConfig/mappers/*.xml
 #TxManager配置
-# tm:
-#   manager:
-#         url: http://192.168.199.14:7004/tx/tx/manager/
+tm:
+  manager:
+        url: http://192.168.199.14:7004/tx/tx/manager/
 ---
 server:
   port: 7002
@@ -88,6 +88,6 @@ eureka:
 mybatis:
   mapper-locations: classpath:/myBatisConfig/mappers/*.xml
 #TxManager配置
-# tm:
-#   manager:
-#         url: http://192.168.199.14:7004/tx/tx/manager/
+tm:
+  manager:
+        url: http://192.168.199.14:7004/tx/tx/manager/
