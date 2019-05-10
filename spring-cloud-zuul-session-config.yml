@@ -3,7 +3,7 @@ spring:
     active: dev                                   #当前应用的环境是开发环境
 ---                                         
 server:
-  port: 7001
+  port: 8001
 
 spring:
   profiles: dev                                   #开发环境的配置
@@ -57,7 +57,7 @@ zuul:
  prefix: /test
  ---                                         
  server:
-   port: 7001
+   port: 8001
 
  spring:
    profiles: test                                   #开发环境的配置
@@ -111,7 +111,7 @@ zuul:
   prefix: /test
   ---                                         
   server:
-    port: 7001
+    port: 8001
 
   spring:
     profiles: DEPLOY                                   #开发环境的配置
