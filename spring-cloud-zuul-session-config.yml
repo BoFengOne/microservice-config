@@ -1,7 +1,7 @@
 spring:
   profiles:
     active: dev                                   #当前应用的环境是开发环境
----                                         
+---
 server:
   port: 8001
 
@@ -40,60 +40,6 @@ management:
         allowed-methods: "*"
 #网关配置
 zuul:
- routes:
-   inventory-service:                             #自定义名称（inventory-service）表示代理inventory微服务
-     path: /inventory/**                          #/inventory/开头的路径转发至表示代理inventory微服务
-     serviceId: spring-cloud-inventory
-     sensitiveHeaders: "*"                        #解决经过网关zuul转发请求后发生session失效
-   order-service:
-     path: /order/**
-     serviceId: spring-cloud-order
-     sensitiveHeaders: "*"
-   portal-service:
-     path: /portal/**
-     serviceId: spring-cloud-portal
-     sensitiveHeaders: "*"
- ignored-services: "*"
- prefix: /test
- ---                                         
- server:
-   port: 8001
-
- spring:
-   profiles: test                                   #开发环境的配置
-   application:
-     name: SPRINGCLOUD-SESSION-ZUUL-8001-TEST
-   redis:
-     host: 192.168.199.14
-     port: 6379
-     #    password: 123456
-     timeout: 6000
-     lettuce:
-       pool:
-         max-active: 8
-         max-wait: -1ms
-         max-idle: 8
-         min-idle: 0
-     database: 0
- #eureka配置
- eureka:
-   client:
-     service-url:
-       defaultZone: http://192.168.199.14:7001/eureka/
-   instance:
-     instance-id: springcloud-session-zuul
-     prefer-ip-address: true   #访问路径显示Ip
-
- management:
-   endpoints:
-     web:
-       exposure:
-         include: "*"
-       cors:
-         allowed-origins: "*"
-         allowed-methods: "*"
- #网关配置
- zuul:
   routes:
     inventory-service:                             #自定义名称（inventory-service）表示代理inventory微服务
       path: /inventory/**                          #/inventory/开头的路径转发至表示代理inventory微服务
@@ -109,57 +55,111 @@ zuul:
       sensitiveHeaders: "*"
   ignored-services: "*"
   prefix: /test
-  ---                                         
-  server:
-    port: 8001
+---
+server:
+  port: 8001
 
-  spring:
-    profiles: DEPLOY                                   #开发环境的配置
-    application:
-      name: SPRINGCLOUD-SESSION-ZUUL-8001-DEPLOY
-    redis:
-      host: 192.168.199.14
-      port: 6379
-      #    password: 123456
-      timeout: 6000
-      lettuce:
-        pool:
-          max-active: 8
-          max-wait: -1ms
-          max-idle: 8
-          min-idle: 0
-      database: 0
-  #eureka配置
-  eureka:
-    client:
-      service-url:
-        defaultZone: http://192.168.199.14:7001/eureka/
-    instance:
-      instance-id: springcloud-session-zuul
-      prefer-ip-address: true   #访问路径显示Ip
+spring:
+  profiles: test                                   #开发环境的配置
+  application:
+    name: SPRINGCLOUD-SESSION-ZUUL-8001-TEST
+  redis:
+    host: 192.168.199.14
+    port: 6379
+    #    password: 123456
+    timeout: 6000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    database: 0
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.199.14:7001/eureka/
+  instance:
+    instance-id: springcloud-session-zuul
+    prefer-ip-address: true   #访问路径显示Ip
 
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: "*"
-        cors:
-          allowed-origins: "*"
-          allowed-methods: "*"
-  #网关配置
-  zuul:
-   routes:
-     inventory-service:                             #自定义名称（inventory-service）表示代理inventory微服务
-       path: /inventory/**                          #/inventory/开头的路径转发至表示代理inventory微服务
-       serviceId: spring-cloud-inventory
-       sensitiveHeaders: "*"                        #解决经过网关zuul转发请求后发生session失效
-     order-service:
-       path: /order/**
-       serviceId: spring-cloud-order
-       sensitiveHeaders: "*"
-     portal-service:
-       path: /portal/**
-       serviceId: spring-cloud-portal
-       sensitiveHeaders: "*"
-   ignored-services: "*"
-   prefix: /test
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+#网关配置
+zuul:
+  routes:
+    inventory-service:                             #自定义名称（inventory-service）表示代理inventory微服务
+      path: /inventory/**                          #/inventory/开头的路径转发至表示代理inventory微服务
+      serviceId: spring-cloud-inventory
+      sensitiveHeaders: "*"                        #解决经过网关zuul转发请求后发生session失效
+    order-service:
+      path: /order/**
+      serviceId: spring-cloud-order
+      sensitiveHeaders: "*"
+    portal-service:
+      path: /portal/**
+      serviceId: spring-cloud-portal
+      sensitiveHeaders: "*"
+  ignored-services: "*"
+  prefix: /test
+---
+server:
+  port: 8001
+
+spring:
+  profiles: DEPLOY                                   #开发环境的配置
+  application:
+    name: SPRINGCLOUD-SESSION-ZUUL-8001-DEPLOY
+  redis:
+    host: 192.168.199.14
+    port: 6379
+    #    password: 123456
+    timeout: 6000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    database: 0
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.199.14:7001/eureka/
+  instance:
+    instance-id: springcloud-session-zuul
+    prefer-ip-address: true   #访问路径显示Ip
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+#网关配置
+zuul:
+  routes:
+    inventory-service:                             #自定义名称（inventory-service）表示代理inventory微服务
+      path: /inventory/**                          #/inventory/开头的路径转发至表示代理inventory微服务
+      serviceId: spring-cloud-inventory
+      sensitiveHeaders: "*"                        #解决经过网关zuul转发请求后发生session失效
+    order-service:
+      path: /order/**
+      serviceId: spring-cloud-order
+      sensitiveHeaders: "*"
+    portal-service:
+      path: /portal/**
+      serviceId: spring-cloud-portal
+      sensitiveHeaders: "*"
+  ignored-services: "*"
+  prefix: /test
