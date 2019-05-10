@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: dev                                   #当前应用的环境是开发环境
+---                                         
+server:
+  port: 7001
+
+spring:
+  profiles: dev                                   #开发环境的配置
+# eureka配置
+eureka:
+  instance:
+    hostname: 192.168.199.56
+  client:
+    service-url:
+      defaultZone: http://192.168.199.56:7001/eureka/
+    register-with-eureka: false                  #当前的eureka-server自己不注册进服务列表
+    fetch-registry: false                        #不通过Eureka获取注册信息
+---
+server:
+  port: 7001
+  
+spring:
+  profiles: test                                   #测试环境的配置
+# eureka配置
+eureka:
+  instance:
+    hostname: 192.168.199.56
+  client:
+    service-url:
+      defaultZone: http://192.168.199.56:7001/eureka/
+    register-with-eureka: false                 #当前的eureka-server自己不注册进服务列表
+    fetch-registry: false                       #不通过Eureka获取注册信息
+---
+server:
+  port: 7001
+  
+spring:
+  profiles: deploy                              #部署环境的配置
+# eureka配置
+eureka:
+  instance:
+    hostname: 192.168.199.56
+  client:
+    service-url:
+      defaultZone: http://192.168.199.56:7001/eureka/
+    register-with-eureka: false                 #当前的eureka-server自己不注册进服务列表
+    fetch-registry: false                       #不通过Eureka获取注册信息
