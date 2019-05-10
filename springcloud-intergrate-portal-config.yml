@@ -11,7 +11,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.199.56:7001/eureka/
+      defaultZone: http://192.168.199.14:7001/eureka/
   instance:
     instance-id: spring-cloud-portal       #服务实例名称修改
     prefer-ip-address: true                #访问路径显示Ip
@@ -50,7 +50,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.199.56:7001/eureka/
+      defaultZone: http://192.168.199.14:7001/eureka/
   instance:
     instance-id: spring-cloud-portal       #服务实例名称修改
     prefer-ip-address: true                #访问路径显示Ip
@@ -89,7 +89,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.199.56:7001/eureka/
+      defaultZone: http://192.168.199.14:7001/eureka/
   instance:
     instance-id: spring-cloud-portal       #服务实例名称修改
     prefer-ip-address: true                #访问路径显示Ip
