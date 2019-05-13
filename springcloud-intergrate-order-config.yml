@@ -27,6 +27,7 @@ spring:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+    schema: classpath:sql/Dump20170725.sql
 #Eureka配置
 eureka:
   client:
