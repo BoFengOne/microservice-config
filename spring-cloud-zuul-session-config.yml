@@ -53,8 +53,12 @@ zuul:
       path: /portal/**
       serviceId: SPRING-CLOUD-PORTAL-7004-DEV
       sensitiveHeaders: "*"
+    portal-service:
+      path: /tx-manager/**
+      serviceId: TX-MANAGER
+      sensitiveHeaders: "*"
   ignored-services: "*"
-  prefix: /test
+  prefix: /
 ---
 server:
   port: 8001
