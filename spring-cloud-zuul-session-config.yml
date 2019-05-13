@@ -58,7 +58,7 @@ zuul:
       serviceId: TX-MANAGER
       sensitiveHeaders: "*"
   ignored-services: "*"
-  prefix: /itegration
+  prefix: /integrate
 ---
 server:
   port: 8001
