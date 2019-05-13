@@ -16,7 +16,6 @@ spring:
     # 配置spring.thymeleaf.mode=LEGACYHTML5 目的就是为了解决这个问题，可以使页面松校验。
     prefix: classpath:/templates/
     suffix: .html
-    mode: LEGACYHTML5
     encoding: UTF-8
     content-type: text/html
     cache: false
