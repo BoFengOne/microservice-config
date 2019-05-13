@@ -9,6 +9,17 @@ spring:
   profiles: dev
   application:
     name: SPRING-CLOUD-INVENTORY-7002-DEV
+  thymeleaf:                                  #spring boot thymeleaf配置
+  #在spring-boot下，默认约定了Controller试图跳转中thymeleaf模板文件的的前缀prefix是”classpath:/templates/”,后缀suffix是”.html”
+  #这个在application.properties配置文件中是可以修改的。
+  #thymeleaf对html的标签约束非常严格，所有的标签必须有开有闭，比如<br></br>或者<br/>是可以的，但是<br>会报错，
+  # 配置spring.thymeleaf.mode=LEGACYHTML5 目的就是为了解决这个问题，可以使页面松校验。
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
   #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_02
@@ -43,6 +54,17 @@ spring:
   profiles: test
   application:
     name: SPRING-CLOUD-INVENTORY-7002-TEST
+  thymeleaf:                                  #spring boot thymeleaf配置
+  #在spring-boot下，默认约定了Controller试图跳转中thymeleaf模板文件的的前缀prefix是”classpath:/templates/”,后缀suffix是”.html”
+  #这个在application.properties配置文件中是可以修改的。
+  #thymeleaf对html的标签约束非常严格，所有的标签必须有开有闭，比如<br></br>或者<br/>是可以的，但是<br>会报错，
+  # 配置spring.thymeleaf.mode=LEGACYHTML5 目的就是为了解决这个问题，可以使页面松校验。
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
   #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_02
@@ -77,6 +99,17 @@ spring:
   profiles: deploy
   application:
     name: SPRING-CLOUD-INVENTORY-7002-TEST
+  thymeleaf:                                  #spring boot thymeleaf配置
+  #在spring-boot下，默认约定了Controller试图跳转中thymeleaf模板文件的的前缀prefix是”classpath:/templates/”,后缀suffix是”.html”
+  #这个在application.properties配置文件中是可以修改的。
+  #thymeleaf对html的标签约束非常严格，所有的标签必须有开有闭，比如<br></br>或者<br/>是可以的，但是<br>会报错，
+  # 配置spring.thymeleaf.mode=LEGACYHTML5 目的就是为了解决这个问题，可以使页面松校验。
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
   #Spring boot 数据源配置
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cloud_02

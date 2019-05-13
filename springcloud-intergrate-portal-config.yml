@@ -9,6 +9,17 @@ spring:
   profiles: dev
   application:
     name: SPRING-CLOUD-PORTAL-7004-DEV
+  thymeleaf:                                  #spring boot thymeleaf配置
+    #在spring-boot下，默认约定了Controller试图跳转中thymeleaf模板文件的的前缀prefix是”classpath:/templates/”,后缀suffix是”.html”
+    #这个在application.properties配置文件中是可以修改的。
+    #thymeleaf对html的标签约束非常严格，所有的标签必须有开有闭，比如<br></br>或者<br/>是可以的，但是<br>会报错，
+    # 配置spring.thymeleaf.mode=LEGACYHTML5 目的就是为了解决这个问题，可以使页面松校验。
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
 # eureka配置
 eureka:
   client:
@@ -31,6 +42,17 @@ spring:
   profiles: test
   application:
     name: SPRING-CLOUD-PORTAL-7004-TEST
+  thymeleaf:                                  #spring boot thymeleaf配置
+    #在spring-boot下，默认约定了Controller试图跳转中thymeleaf模板文件的的前缀prefix是”classpath:/templates/”,后缀suffix是”.html”
+    #这个在application.properties配置文件中是可以修改的。
+    #thymeleaf对html的标签约束非常严格，所有的标签必须有开有闭，比如<br></br>或者<br/>是可以的，但是<br>会报错，
+    # 配置spring.thymeleaf.mode=LEGACYHTML5 目的就是为了解决这个问题，可以使页面松校验。
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
 # eureka配置
 eureka:
   client:
@@ -45,35 +67,24 @@ eureka:
 tm:
   manager:
     url:  http://192.168.199.28:8888/tx/manager/
-#网关配置
-# zuul:
-#   routes:
-#     inventory-service:                             #自定义名称（inventory-service）表示代理inventory微服务
-#       path: /inventory/**                          #/inventory/开头的路径转发至表示代理inventory微服务
-#       serviceId: spring-cloud-inventory
-#       sensitiveHeaders: "*"                        #解决经过网关zuul转发请求后发生session失效
-#     order-service:
-#       path: /order/**
-#       serviceId: spring-cloud-order
-#       sensitiveHeaders: "*"
-#     portal-service:
-#       path: /portal/**
-#       serviceId: spring-cloud-portal
-#       sensitiveHeaders: "*"
-#     tx-manager:
-#       path: /tx/**
-#       serviceId: tx-manager
-#       sensitiveHeaders: "*"
-#   ignored-services: "*"
-#   prefix: /test
 ---
 server:
   port: 7004
-
 spring:
   profiles: deploy
   application:
     name: SPRING-CLOUD-PORTAL-7004-DEPLOY
+  thymeleaf:                                  #spring boot thymeleaf配置
+    #在spring-boot下，默认约定了Controller试图跳转中thymeleaf模板文件的的前缀prefix是”classpath:/templates/”,后缀suffix是”.html”
+    #这个在application.properties配置文件中是可以修改的。
+    #thymeleaf对html的标签约束非常严格，所有的标签必须有开有闭，比如<br></br>或者<br/>是可以的，但是<br>会报错，
+    # 配置spring.thymeleaf.mode=LEGACYHTML5 目的就是为了解决这个问题，可以使页面松校验。
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
 # eureka配置
 eureka:
   client:
@@ -88,24 +99,3 @@ eureka:
 tm:
   manager:
     url:  http://192.168.199.28:8888/tx/manager/
-#网关配置
-# zuul:
-#   routes:
-#     inventory-service:                             #自定义名称（inventory-service）表示代理inventory微服务
-#       path: /inventory/**                          #/inventory/开头的路径转发至表示代理inventory微服务
-#       serviceId: spring-cloud-inventory
-#       sensitiveHeaders: "*"                        #解决经过网关zuul转发请求后发生session失效
-#     order-service:
-#       path: /order/**
-#       serviceId: spring-cloud-order
-#       sensitiveHeaders: "*"
-#     portal-service:
-#       path: /portal/**
-#       serviceId: spring-cloud-portal
-#       sensitiveHeaders: "*"
-#     tx-manager:
-#       path: /tx/**
-#       serviceId: tx-manager
-#       sensitiveHeaders: "*"
-#   ignored-services: "*"
-#   prefix: /test
