@@ -10,7 +10,7 @@ spring:
   application:
     name: SPRINGCLOUD-SESSION-ZUUL-8001-DEV
   redis:
-    host: 192.168.1.101
+    host: 192.168.199.1
     port: 6379
     #    password: 123456
     timeout: 6000
@@ -25,7 +25,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.1.101:7001/eureka/
+      defaultZone: http://192.168.199.1:7001/eureka/
   instance:
     instance-id: springcloud-session-zuul
     prefer-ip-address: true   #访问路径显示Ip
@@ -64,7 +64,7 @@ spring:
   application:
     name: SPRINGCLOUD-SESSION-ZUUL-8001-TEST
   redis:
-    host: 192.168.1.101
+    host: 192.168.199.1
     port: 6379
     #    password: 123456
     timeout: 6000
@@ -79,7 +79,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.1.101:7001/eureka/
+      defaultZone: http://192.168.199.1:7001/eureka/
   instance:
     instance-id: springcloud-session-zuul
     prefer-ip-address: true   #访问路径显示Ip
@@ -118,7 +118,7 @@ spring:
   application:
     name: SPRINGCLOUD-SESSION-ZUUL-8001-DEPLOY
   redis:
-    host: 192.168.1.101
+    host: 192.168.199.1
     port: 6379
     #    password: 123456
     timeout: 6000
@@ -133,7 +133,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.1.101:7001/eureka/
+      defaultZone: http://192.168.199.1:7001/eureka/
   instance:
     instance-id: springcloud-session-zuul
     prefer-ip-address: true   #访问路径显示Ip
