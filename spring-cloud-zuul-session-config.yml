@@ -53,7 +53,7 @@ zuul:
       path: /portal/**
       serviceId: SPRING-CLOUD-PORTAL-7004-DEV
       sensitiveHeaders: "*"
-    portal-service:
+    tx-service:
       path: /tx-manager/**
       serviceId: TX-MANAGER
       sensitiveHeaders: "*"
