@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.199.28:7001/eureka/
+      defaultZone: http://ureka-server-host:7001/eureka/
     registerWithEureka: true
     fetch-registry: true
   instance:
@@ -32,7 +32,7 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url:  http://192.168.199.28:8888/tx/manager/
+    url:  http://tx-manager-host:8888/tx/manager/
 ---
 server:
   port: 7004
@@ -56,7 +56,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.199.28:7001/eureka/
+      defaultZone: http://ureka-server-host:7001/eureka/
     registerWithEureka: true
     fetch-registry: true
   instance:
@@ -65,7 +65,7 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url:  http://192.168.199.28:8888/tx/manager/
+    url:  http://tx-manager-host:8888/tx/manager/
 ---
 server:
   port: 7004
@@ -88,7 +88,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.199.28:7001/eureka/
+      defaultZone: http://ureka-server-host:7001/eureka/
     registerWithEureka: true
     fetch-registry: true
   instance:
@@ -97,4 +97,4 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url:  http://192.168.199.28:8888/tx/manager/
+    url:  http://tx-manager-host:8888/tx/manager/
