@@ -37,7 +37,7 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url: http://tx-manager-host:8888/integrate/lcn/tx/manager/
+    url: http://zuul-session-host:8001/integrate/lcn/tx/manager/
 ---
 server:
   port: 7004
@@ -70,7 +70,7 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url: http://tx-manager-host:8888/integrate/lcn/tx/manager/
+    url: http://zuul-session-host:8001/integrate/lcn/tx/manager/
 ---
 server:
   port: 7004
@@ -102,4 +102,4 @@ eureka:
 # #TxManager配置
 tm:
   manager:
-    url: http://tx-manager-host:8888/integrate/lcn/tx/manager/
+    url: http://zuul-session-host:8001/integrate/lcn/tx/manager/
