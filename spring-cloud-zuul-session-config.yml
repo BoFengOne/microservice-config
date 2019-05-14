@@ -54,7 +54,7 @@ zuul:
       serviceId: SPRING-CLOUD-PORTAL-7004-DEV
       sensitiveHeaders: "*"
     tx-service:
-      path: /tx-manager/**
+      path: /lcn/**
       serviceId: TX-MANAGER
       sensitiveHeaders: "*"
   ignored-services: "*"
